@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {useSelector,useDispatch} from 'react-redux'
+
 
 function App() {
+  const multiply = useSelector((state)=>state.multiply) 
+  const dispatch = useDispatch();
+
+  const Multiply2 = () =>{
+    dispatch({type:'Mul2'})
+
+  }
+
+  const Multiply5 = () =>{
+    dispatch({type:'Mul5'})
+    
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <h1>Multiplier</h1>
+    <h2>{multiply}</h2>
+    <button onClick={Multiply2}>Multiply by 2</button>
+    <button onClick={Multiply5}>Multiply by 5</button>
     </div>
   );
 }
