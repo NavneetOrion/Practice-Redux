@@ -14,6 +14,7 @@ const ReducerFunc = (state={multiply : 1},action) =>{
   else{
     return state
   }
+  
 }
 
 

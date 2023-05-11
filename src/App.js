@@ -12,6 +12,7 @@ function App() {
 
   const Multiply5 = () =>{
     dispatch({type:'Mul5'})
+    
 
   }
   return (
